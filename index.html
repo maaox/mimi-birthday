@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitación 25</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Imágenes Responsivas -->
+      <img src="./img/header-large.png" alt="header-large" class="img-large" />
+      <img src="./img/header-small.png" alt="header-small" class="img-small" />
+
+      <div class="content">
+        <!-- Bloque de '25 Festejemos Mis Veinticinco' -->
+        <div class="celebration">
+          <span class="big-number">25</span>
+          <div class="text-overlay">
+            <p class="title">Festejemos</p>
+            <p class="subtitle">Mis <br />Veinticinco</p>
+          </div>
+        </div>
+
+        <!-- Texto debajo del bloque anterior -->
+        <div class="invitation-text">
+          <p>
+            Te espero con mi familia y amigos en <br />
+            esta ocasión especial.
+          </p>
+        </div>
+
+        <!-- Bloque con detalles de la fecha -->
+        <div class="date-details">
+          <span class="date-title">SÁBADO</span>
+          <div class="date-info">
+            <p class="month-year">SEPTIEMBRE</p>
+            <p class="day">28</p>
+            <p class="month-year">2024</p>
+          </div>
+          <span class="time">7:30 PM</span>
+        </div>
+
+        <!-- Contenido Superpuesto -->
+        <div class="overlay">
+          <span>Te espero</span>
+          <p id="nombre" class="nombre">Nombre</p>
+          <button id="confirmButton">Confirma tu asistencia</button>
+        </div>
+
+        <!-- Dirección -->
+        <div class="location">
+          <p>Jr. Manuel Seoane 397</p>
+          <span class="divider"></span>
+          <p>Esquina de Urrelo y Seoane</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal-content">
+        <span class="close" aria-label="Cerrar">&times;</span>
+        <h2 id="modalTitle">Confirma tu asistencia</h2>
+        <button class="modal-button" id="siButton">Si asistiré</button>
+        <button class="modal-button" id="confirmarButton">
+          Confirmaré luego
+        </button>
+        <button class="modal-button" id="noButton">No asistiré</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

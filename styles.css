@@ -1,0 +1,429 @@
+/* Establecer fuente*/
+
+/* Fuente GlacialIndifference Regular */
+@font-face {
+  font-family: "GlacialIndifference";
+  src: url("fonts/GlacialIndifference-Regular.woff2") format("woff2"),
+    url("fonts/GlacialIndifference-Regular.woff") format("woff"),
+    url("fonts/GlacialIndifference-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fuente GlacialIndifference Bold */
+@font-face {
+  font-family: "GlacialIndifference";
+  src: url("fonts/GlacialIndifference-Bold.woff2") format("woff2"),
+    url("fonts/GlacialIndifference-Bold.woff") format("woff"),
+    url("fonts/GlacialIndifference-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fuente MoonTime*/
+@font-face {
+  font-family: "MoonTime";
+  src: url("fonts/MoonTime.woff2") format("woff2"),
+    url("fonts/MoonTime.woff") format("woff"),
+    url("fonts/MoonTime.otf") format("opentype");
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "GlacialIndifference", "Arial", sans-serif;
+  background-color: #fff5f8;
+  color: #737373;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+/* Imágenes Responsivas */
+.img-large {
+  display: none;
+  width: 100%;
+}
+
+.img-small {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Contenedor Secundario */
+.content {
+  position: relative;
+  margin: 155px auto 30px;
+  padding: 20px;
+  border: 2px solid rgba(115, 115, 115, 0.5);
+  border-radius: 15px;
+  width: 90%;
+}
+
+.celebration {
+  display: inline-block;
+  position: absolute;
+  top: -118px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 55px;
+  background-color: #fff5f8;
+}
+
+.big-number {
+  font-size: 14rem;
+  color: #ffe6ee;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  z-index: 1;
+}
+
+.text-overlay {
+  position: relative;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-family: "MoonTime", "Arial", sans-serif;
+  text-align: center;
+}
+
+.title {
+  color: rgba(255, 195, 214, 0.5);
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #ffc3d6;
+  font-size: 5.8rem;
+  line-height: 0.7;
+}
+
+/* Invitación texto */
+.invitation-text {
+  margin-top: 85px;
+  font-size: 1rem;
+}
+
+/* Detalles de la fecha */
+.date-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  line-height: 1;
+}
+
+.date-title,
+.time {
+  font-size: 1.8rem;
+  padding: 10px;
+  border-top: 2px solid #ffc3d6;
+  border-bottom: 2px solid #ffc3d6;
+}
+
+.date-info {
+  text-align: center;
+}
+
+.date-info p {
+  margin: 0;
+}
+
+.month-year {
+  font-size: 0.8rem;
+}
+
+.day {
+  font-size: 3.8rem;
+}
+
+/* Contenido dinámico */
+.overlay {
+  text-align: center;
+  width: 100%;
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+
+.overlay span {
+  font-size: 1rem;
+}
+
+.overlay p {
+  font-size: 4rem;
+  margin-top: 15px;
+  font-family: "MoonTime", sans-serif;
+}
+
+.overlay button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #ffc3d6; /* Color azul */
+  color: white;
+  font-family: "GlacialIndifference", "Arial", sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.overlay button:hover {
+  background-color: #f59eba; /* Color azul más oscuro al pasar el mouse */
+}
+
+/* Ubicación */
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  font-size: 1rem;
+}
+
+.divider {
+  display: inline-block;
+  height: 15px;
+  width: 3px;
+  background-color: #ffc3d6;
+  margin: 0 10px;
+}
+
+/* Estilos del modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.modal-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  font-family: "GlacialIndifference", "Arial", sans-serif;
+}
+
+#siButton {
+  background-color: #d4edbc;
+  color: #11734b;
+}
+
+#siButton:hover {
+  background-color: #b6e48b;
+}
+
+/* Botón "Confirmaré luego" */
+#confirmarButton {
+  background-color: #ffe5a0;
+  color: #473821;
+}
+
+#confirmarButton:hover {
+  background-color: #fad87c;
+}
+
+#noButton {
+  background-color: #ffcfc9;
+  color: #b10202;
+}
+
+#noButton:hover {
+  background-color: #fea599;
+}
+
+/* Responsividad */
+@media (min-width: 480px) {
+
+  .date-title,
+  .time {
+    font-size: 2.3rem;
+    padding: 1.2rem;
+  }
+
+  .month-year {
+    font-size: 1rem;
+  }
+
+  .day {
+    font-size: 5.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Imágenes Responsivas */
+  .img-large {
+    display: block;
+  }
+
+  .img-small {
+    display: none;
+  }
+
+  /* Contenedor Secundario */
+  .content {
+    position: relative;
+    margin: 70px auto 40px;
+    border: 3.3px solid rgba(115, 115, 115, 0.5);
+    border-radius: 20px;
+    width: 95%;
+  }
+
+  .big-number {
+    top: -80px;
+  }
+
+  .celebration {
+    display: none;
+  }
+
+  /* Invitación texto */
+  .invitation-text {
+    display: inline-block;
+    position: relative;
+    margin-top: 0px;
+    top: -85px;
+    font-size: 2.3rem;
+    text-align: center;
+    background-color: #fff5f8;
+    padding: 10px 40px;
+  }
+
+  /* Detalles de la fecha */
+  .date-details {
+    margin-top: 0;
+  }
+
+  .date-title,
+  .time {
+    font-size: 3rem;
+    padding: 1.2rem 3.8rem;
+  }
+
+  .month-year {
+    font-size: 1.5rem;
+  }
+
+  .day {
+    font-size: 8rem;
+  }
+
+  /* Contenido dinámico */
+  .overlay {
+    margin-top: 90px;
+  }
+
+  .overlay span {
+    font-size: 1.5rem;
+  }
+
+  .overlay p {
+    font-size: 8rem;
+  }
+
+  .overlay button {
+    font-size: 1.5rem;
+    border-radius: 8px;
+  }
+
+  /* Ubicación */
+  .location {
+    margin-top: 50px;
+    font-size: 1.5rem;
+  }
+
+  /* Modal */
+  .modal-content {
+    width: 90%;
+    margin: 30% auto;
+  }
+}
+
+@media (min-width: 908px) {
+  /* Detalles de la fecha */
+  .date-title,
+  .time {
+    font-size: 3.8rem;
+    padding: 1.4rem 5rem;
+  }
+
+  .month-year {
+    font-size: 1.8rem;
+  }
+
+  .day {
+    font-size: 9rem;
+  }
+}
+
+@media (min-width: 1188px) {
+  /* Detalles de la fecha */
+  .date-title,
+  .time {
+    font-size: 4.3rem;
+    padding: 1.4rem 8rem;
+  }
+
+  .month-year {
+    font-size: 2.3rem;
+  }
+
+  .day {
+    font-size: 9.5rem;
+  }
+}
