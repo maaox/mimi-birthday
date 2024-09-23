@@ -26,7 +26,7 @@ const LISTA_INVITADOS = Object.freeze({
   "C25-RNAO24": "Seleste",
   "C25-RNAO25": "Tío Eddy",
   "C25-RNAO26": "Tía Rosita",
-  "C25-RNAO27": "Yovana",
+  "C25-RNAO27": "Miss Yovi",
   "C25-RNAO28": "Wilder Huaccha",
   "C25-RNAO29": "Wilmer Asto",
   "C25-RNAO30": "Elías Asto",
@@ -34,6 +34,7 @@ const LISTA_INVITADOS = Object.freeze({
   "C25-RNAO32": "Marlene Asto",
   "C25-RNAO33": "Luzmila",
   "C25-RNAO34": "Caleb",
+  "C25-RNAO35": "Hna Rita",
 });
 
 // URL de la aplicación AppScript
