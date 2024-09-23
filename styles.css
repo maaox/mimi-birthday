@@ -65,7 +65,7 @@ body {
 /* Contenedor Secundario */
 .content {
   position: relative;
-  margin: 155px auto 30px;
+  margin: 130px auto 30px;
   padding: 20px;
   border: 2px solid rgba(115, 115, 115, 0.5);
   border-radius: 15px;
@@ -75,15 +75,15 @@ body {
 .celebration {
   display: inline-block;
   position: absolute;
-  top: -118px;
+  top: -90px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 0 55px;
+  padding: 0 30px;
   background-color: #fff5f8;
 }
 
 .big-number {
-  font-size: 14rem;
+  font-size: 11rem;
   color: #ffe6ee;
   position: absolute;
   top: -25px;
@@ -105,13 +105,13 @@ body {
 
 .title {
   color: rgba(255, 195, 214, 0.5);
-  font-size: 4rem;
+  font-size: 2.8rem;
   margin-bottom: 10px;
 }
 
 .subtitle {
   color: #ffc3d6;
-  font-size: 5.8rem;
+  font-size: 4.8rem;
   line-height: 0.7;
 }
 
@@ -132,7 +132,7 @@ body {
 
 .date-title,
 .time {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   padding: 10px;
   border-top: 2px solid #ffc3d6;
   border-bottom: 2px solid #ffc3d6;
@@ -147,11 +147,11 @@ body {
 }
 
 .month-year {
-  font-size: 0.8rem;
+  font-size: 0.65rem;
 }
 
 .day {
-  font-size: 3.8rem;
+  font-size: 3.5rem;
 }
 
 /* Contenido dinámico */
@@ -210,11 +210,14 @@ body {
 .modal {
   display: none;
   position: fixed;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  margin: auto;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -289,7 +292,36 @@ body {
 
 /* Responsividad */
 @media (min-width: 480px) {
+  /* Contenedor Secundario */
+  .content {
+    margin: 155px auto 30px;
+  }
 
+  .celebration {
+    top: -118px;
+    padding: 0 55px;
+  }
+
+  .big-number {
+    font-size: 14rem;
+    top: -25px;
+    left: 50%;
+    z-index: 1;
+  }
+
+  .text-overlay {
+    top: -40px;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    font-size: 5.8rem;
+  }
+
+  /* Detalles de la fecha */
   .date-title,
   .time {
     font-size: 2.3rem;
@@ -385,12 +417,6 @@ body {
   .location {
     margin-top: 50px;
     font-size: 1.5rem;
-  }
-
-  /* Modal */
-  .modal-content {
-    width: 90%;
-    margin: 30% auto;
   }
 }
 

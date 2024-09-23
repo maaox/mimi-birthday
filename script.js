@@ -38,7 +38,7 @@ const LISTA_INVITADOS = Object.freeze({
 
 // URL de la aplicación AppScript
 const URL_BASE =
-  "https://script.google.com/macros/s/AKfycbx1JGUEWsVVNGl6UWfWLjdB9BCvBcsiw2Mes3nrxI0/dev";
+  "https://script.google.com/a/~/macros/s/AKfycbx1JGUEWsVVNGl6UWfWLjdB9BCvBcsiw2Mes3nrxI0/dev";
 
 // Obtener elementos del DOM
 const modal = document.getElementById("modal");
@@ -58,7 +58,7 @@ let previousActiveElement = null;
  * Función para abrir el modal
  */
 const openModal = () => {
-  modal.style.display = "block";
+  modal.style.display = "flex";
   modal.setAttribute("aria-hidden", "false");
 
   // Guardar el elemento que tenía el foco
